@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+//Colors 
+$main-bg: hsl(217, 54%, 11%); 
+$card-bg: hsl(216, 50%, 16%); 
+$box-shadow: hsl(215, 32%, 27%); 
+$white: hsl(0, 0%, 100%); 
+$soft-blue: hsl(215, 51%, 70%); 
+$cyan: hsl(178, 100%, 50%); 
+
+//Font + Weight 
+$font: 'Outfit', sans-serif;
+$bold: 600; 
+$normal: 400; 
+$light: 300; 
+
+//Mixins 
+@mixin center {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+}
+
+
+//Reset
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0; 
+}
+
+//Main Styles
+
+body{
+    background-color: $main-bg; 
+    font-family: $font; 
+    height: 100vh; 
+    @include center; 
+}
+
+.card{
+    
+        width: 310px;  
+        height: 525px; 
+        @include center; 
+    
+    background-color: $card-bg; 
+    border-radius: 15px; 
+    box-shadow: 1px 10px 30px 2px hsl(215, 54%, 7%); 
+    &-content{
+        width: 85%; 
+        height: 95%;  
+        display: flex; 
+        flex-direction: column; 
+        // justify-content: space-between; 
+        gap: 15px;
+    }
+}
+
+.nft-image{
+    align-self: center; 
+    margin-top:  10px; 
+    img{
+        width: 100%; 
+        height: 100%; 
+        border-radius: 10px; 
+    }
+
+    #preview{
+        width: 267px; 
+        height: 267px; 
+        border-radius: 10px; 
+        z-index: 2; 
+        background-color: $cyan; 
+        opacity: 0.5; 
+        position: absolute; 
+    }
+}
+
+.nft-hover{
+    position: absolute; 
+    display: none;  
+}
+#view{
+    position: relative; 
+    z-index: 3; 
+    transform: translate(110px, 115px);
+  
+}
+
+#profile-pic{
+    img{
+        width: 35px; 
+        height: 35px; 
+        border: solid 1px $white; 
+        border-radius: 50%; 
+    }
+}
+
+.heading{
+    font-size: 1.3em; 
+    font-weight: $bold; 
+    color: $white; 
+    &:hover{
+        color: $cyan; 
+        text-shadow: 0 0 1px $cyan; 
+    }
+}
+
+.light-text{
+    color: $soft-blue; 
+    line-height: 24px; 
+}
+
+.price-and-time{
+    display: flex; 
+    justify-content: space-between; 
+}
+.price{
+    display: flex; 
+    width: 95px; 
+    justify-content: space-between; 
+}
+.time{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 95px; 
+}
+
+#time-left{
+    transform: translateY(-3px)
+}
+
+#eth{
+    font-weight: $bold; 
+    color: $cyan; 
+  }
+
+  #line{
+      background-color: $box-shadow; 
+      height: 1px; 
+  }
+
+  .created-by{
+      display: flex; 
+      flex-direction: row; 
+      align-items: center; 
+      gap:  15px; 
+  }
+
+  #white-name{
+      color: $white; 
+      &:hover{
+          color: $cyan; 
+          text-shadow: 0 0 1px $cyan; 
+      }
+  }

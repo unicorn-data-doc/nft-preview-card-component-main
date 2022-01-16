@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+body {
+  background-color: #0d192b;
+  font-family: "Outfit", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  width: 310px;
+  height: 525px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #14253d;
+  border-radius: 15px;
+  box-shadow: 1px 10px 30px 2px #08101b;
+}
+.card-content {
+  width: 85%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nft-image {
+  align-self: center;
+  margin-top: 10px;
+}
+.nft-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.nft-image #preview {
+  width: 267px;
+  height: 267px;
+  border-radius: 10px;
+  z-index: 2;
+  background-color: #00fff7;
+  opacity: 0.5;
+  position: absolute;
+}
+
+.nft-hover {
+  position: absolute;
+  display: none;
+}
+
+#view {
+  position: relative;
+  z-index: 3;
+  transform: translate(110px, 115px);
+}
+
+#profile-pic img {
+  width: 35px;
+  height: 35px;
+  border: solid 1px white;
+  border-radius: 50%;
+}
+
+.heading {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: white;
+}
+.heading:hover {
+  color: #00fff7;
+  text-shadow: 0 0 1px #00fff7;
+}
+
+.light-text {
+  color: #8bacda;
+  line-height: 24px;
+}
+
+.price-and-time {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  display: flex;
+  width: 95px;
+  justify-content: space-between;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95px;
+}
+
+#time-left {
+  transform: translateY(-3px);
+}
+
+#eth {
+  font-weight: 600;
+  color: #00fff7;
+}
+
+#line {
+  background-color: #2f415b;
+  height: 1px;
+}
+
+.created-by {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+#white-name {
+  color: white;
+}
+#white-name:hover {
+  color: #00fff7;
+  text-shadow: 0 0 1px #00fff7;
+}
+
+/*# sourceMappingURL=output.css.map */
